@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, make_response, request
+from flask import Flask, jsonify, request
 import random 
 import firebase_admin
 from firebase_admin import credentials, firestore
@@ -109,12 +109,3 @@ def excluir_charada(id):
 if __name__ == '__main__':
     app.run(debug=True)
     
-
-    # @app.route('/charadas/<int:id>', methods = ['GET'])
-    # def busca(id):
-    #     for charada in charadas:
-    #         if charada['id'] == id:
-    #             return jsonify(charada), 200
-        
-    #     return jsonify({'mensagem': 'Erro! - Charada não encontrada'}), 404
-        
